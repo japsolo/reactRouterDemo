@@ -69,7 +69,6 @@ class Api extends Component {
 			character.filmTitles = [...character.filmTitles, {title: film.title, overview: film.opening_crawl}];
 			this.setState({ characterDetails: character, showModal: true });
 		});
-		
 	}
 	
 	handleHide () {
@@ -101,7 +100,7 @@ class Api extends Component {
 										<Button
 											variant="info"
 											data-idx={idx}
-											onClick={e => this.showCharacterDetails(e)}
+											onClick={this.showCharacterDetails}
 										>Ver detalles</Button>
 									</Card.Body>
 								</Card>
