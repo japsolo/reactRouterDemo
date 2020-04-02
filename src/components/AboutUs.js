@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from "react";
 import { Switch, Route, Link } from 'react-router-dom';
 
 // Bootstrap components
@@ -15,6 +15,11 @@ const users = [
 
 const AboutUs = ({ location }) => {
 	let queryString = new URLSearchParams(location.search);	
+
+	useEffect(() => {
+		console.log('Did Mount');
+		console.log('Did UnMount');
+	}, [])
 
 	return (
 		<React.Fragment>
